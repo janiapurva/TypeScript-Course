@@ -1,0 +1,8 @@
+{
+  "name": "TypeScript-Course",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:janiapurva/TypeScript-Course.git",
+  "author": "janiapurva <jani.apurva@yahoo.com>",
+  "license": "MIT"
+}

@@ -14,9 +14,9 @@ const person = {
 
 
 //for Tuple data type 
-const personTwo:{
+const personTuple:{
   name: string;
-  age:string;
+  age:number;
   hobbies:string[];
   //Tuple data type with defining value with exact location. You can explicit define
   role:[number,string];
@@ -29,8 +29,19 @@ const personTwo:{
   role:[2,'author']
 }
 
+//Enum data type ex. Enum{NEW,OLD}. You can assign value by any number and after all value it follow number or string
 
-console.log(person);
+enum Role {ADMIN = 5, READ_ONLY = 100 , AUTHOR = "ABC" }
+
+const personEnum = {
+  name: "Apurva",
+  age: 29,
+  hobbies: ["Sports", "Cooking"],
+  
+  role: Role.ADMIN
+};
+
+console.log(Role.ADMIN);
 
 // you can intialize variable with defiening value and data type for array
 let favouriteActivities: string[];

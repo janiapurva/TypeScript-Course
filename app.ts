@@ -1,51 +1,9 @@
-//Union type
-//nay where in function where function parameter accept two diffrent kind of data type then use Union data type
-function combine(
-  input1: number | string,
-  input2: number | string,
-  resultConversion: string
-) {
-  let result;
-  (typeof input1 === "number" && typeof input2 === "number") ||
-  resultConversion === "as-number"
-    ? (result = +input1 + +input2)
-    : (result = input1.toString() + input2.toString);
-
-  return result;
+// you can also define return  type after closing round bracket by : and data type return. You should always allow type script to define rather than explict define
+function add (n1:number, n2:number):number{
+  return n1 + n2 
 }
 
-// literal type basically defining argument directly hardcoded value
-
-function combination(
-  input1: number | string,
-  input2: number | string,
-  resultConversion: "as-number" | "as-text"
-) {
-  let result;
-  (typeof input1 === "number" && typeof input2 === "number") ||
-  resultConversion === "as-number"
-    ? (result = +input1 + +input2)
-    : (result = input1.toString() + input2.toString);
-
-  return result;
-}
-
-//type alias
-// define by word type and variable
-// you can store expected data type and reuable for programmme
-type Combinable = number | string;
-type ConversionDescriptor = 'as-number' | 'as- text'
-
-function alias(
-  input1: Combinable,
-  input2: Combinable,
-  resultConversion: ConversionDescriptor
-) {
-  let result;
-  (typeof input1 === "number" && typeof input2 === "number") ||
-  resultConversion === "as-number"
-    ? (result = +input1 + +input2)
-    : (result = input1.toString() + input2.toString);
-
-  return result;
+// if function not returning anything you can explict defire void or TypeScript is automatically define for you
+function minus (n1: number, n2:number):void{
+console.log(n1 + n2)
 }

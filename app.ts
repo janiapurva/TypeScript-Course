@@ -1,16 +1,22 @@
-// you can also define return  type after closing round bracket by : and data type return. You should always allow type script to define rather than explict define
-function add(n1: number, n2: number): number {
-  return n1 + n2;
+// if user input is unknown then you can define as unknown value type and you can assign any value type
+
+let userInput : unknown;
+let userName: string;
+
+userInput = 5;
+userInput ='Aj';
+
+// you can reassign with specific varible assignement
+
+// let userName = userInput
+
+//you can do it by extra check placing to match previous data type
+if(typeof userInput === 'string'){
+  userName = userInput;
 }
 
-// if function not returning anything you can explict defire void or TypeScript is automatically define for you
-function minus(n1: number, n2: number): void {
-  console.log(n1 + n2);
+// never data type
+// when function does not return nothing you can use never value to more specific 
+function generateError(message:string,code:number): never{
+  throw {message:message,errorCode:code};
 }
-
-// you can define function to varible and define by explicitley  but problem is that you can assign any type of function because we are telling TypeScript is only accepting fucntion.
-let combineValue: Function;
-combineValue = add;
-
-// you can define  specific type by defining fucntion parameter by type and  return value
-let combo: (a: number, b: number) => number;
